@@ -15,6 +15,30 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// ===== Skills / Tools toggle =====
+function iconFallback(el, text) {
+  const card = el.parentElement;
+  el.remove();
+  card.classList.add("skill-card--fallback");
+  card.textContent = text;
+}
+
+const skillsToggleBtns = document.querySelectorAll(".skills-toggle__btn");
+skillsToggleBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    skillsToggleBtns.forEach((b) => {
+      b.classList.remove("is-active");
+      b.setAttribute("aria-selected", "false");
+    });
+    btn.classList.add("is-active");
+    btn.setAttribute("aria-selected", "true");
+
+    document.querySelectorAll(".skills-grid").forEach((grid) => {
+      grid.hidden = grid.id !== btn.dataset.target;
+    });
+  });
+});
+
 // ===== Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
 
