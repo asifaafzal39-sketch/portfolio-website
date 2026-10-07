@@ -1,0 +1,19 @@
+{
+  "name": "asifa-afzal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Asifa Afzal — Software Engineer | Backend Developer",
+  "author": "Asifa Afzal <asifaafzal39@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "http-server . -p 3000 -o --cors -c-1",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

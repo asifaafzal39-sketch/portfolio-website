@@ -1,0 +1,20 @@
+/* ==========================================================================
+   main.css — Root entry point. Imports all CSS partials in correct order.
+   Browsers resolve @import before applying any rules, so order matters.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@import "_variables.css";
+@import "_reset.css";
+@import "_layout.css";
+@import "_utilities.css";
+@import "_navbar.css";
+@import "_hero.css";
+@import "_about.css";
+@import "_skills.css";
+@import "_projects.css";
+@import "_experience.css";
+@import "_education.css";
+@import "_contact.css";
+@import "_footer.css";

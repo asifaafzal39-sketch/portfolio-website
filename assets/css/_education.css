@@ -1,0 +1,92 @@
+/* ==========================================================================
+   _education.css — Education Section
+   ========================================================================== */
+
+.education-card {
+  max-width: 680px;
+  margin-inline: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-10);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top stripe */
+.education-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
+}
+
+.education-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+
+.education-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+}
+
+.education-degree {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: var(--space-2);
+}
+
+.education-institution {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+.education-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.education-meta-item strong {
+  color: var(--color-bold);
+}
+
+.education-meta-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent-2);
+  flex-shrink: 0;
+}

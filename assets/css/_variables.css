@@ -1,0 +1,87 @@
+/* ==========================================================================
+   _variables.css — Design Tokens
+   Pure White Theme with Vibrant Royal Blue for Headings/Bold & Black for Body
+   ========================================================================== */
+
+:root {
+  /* ── Colors (Clean White Theme) ───────────────────────────────────────── */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f8fafc;
+  --color-border: #e2e8f0;
+
+  /* ── Text Colors ──────────────────────────────────────────────────────── */
+  --color-text-primary: #0f172a;   /* Rich clean black for body/normal text */
+  --color-text-secondary: #1e293b; /* Deep charcoal for subtext */
+  --color-text-muted: #64748b;     /* Slate for captions/dates */
+
+  /* ── Brand Blues (Vibrant Royal Blue for Headings & Bold Text) ───────── */
+  --color-blue: #0055ff;
+  --color-blue-dark: #0043cc;
+  --color-heading: #0055ff;        /* All headings in royal blue */
+  --color-bold: #0055ff;           /* All bold/strong text in royal blue */
+
+  --color-accent: #0055ff;         /* Primary brand accent */
+  --color-accent-hover: #0043cc;
+  --color-accent-light: #eff6ff;
+  --color-accent-2: #0284c7;       /* Ocean blue secondary */
+  --color-accent-2-light: #e0f2fe;
+
+  --color-disabled: #cbd5e1;
+  --color-disabled-text: #94a3b8;
+  --color-success: #16a34a;
+  --color-timeline: #0055ff;
+
+  /* ── Typography ──────────────────────────────────────────────────────── */
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --text-xs: 0.75rem; /*  12px */
+  --text-sm: 0.875rem; /*  14px */
+  --text-base: 1rem; /*  16px */
+  --text-lg: 1.125rem; /*  18px */
+  --text-xl: 1.25rem; /*  20px */
+  --text-2xl: 1.5rem; /*  24px */
+  --text-3xl: 1.875rem; /*  30px */
+  --text-4xl: 2.25rem; /*  36px */
+  --text-5xl: 3rem; /*  48px */
+
+  /* ── Spacing (8-px grid) ─────────────────────────────────────────────── */
+  --space-1: 0.25rem; /*  4px */
+  --space-2: 0.5rem; /*  8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
+
+  /* ── Borders & Radius ────────────────────────────────────────────────── */
+  --radius-sm: 0.375rem; /*  6px */
+  --radius-md: 0.5rem; /*  8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+  --radius-2xl: 1.5rem; /* 24px */
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 30px rgba(0, 85, 255, 0.1), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-accent: 0 4px 20px rgba(0, 85, 255, 0.28);
+
+  /* ── Transitions ─────────────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+  --container-max: 1200px;
+  --navbar-height: 70px;
+  --section-py: var(--space-24);
+}

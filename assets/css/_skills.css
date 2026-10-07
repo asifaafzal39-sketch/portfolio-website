@@ -1,0 +1,136 @@
+/* ==========================================================================
+   _skills.css — Skills Grid
+   ========================================================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Category card ─────────────────────────────────────────────────────────── */
+.skill-category {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.skill-category:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skill-category-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skill-category-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+}
+
+.skill-category-name {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-heading);
+}
+
+/* ── Skill icon grid inside each category ──────────────────────────────────── */
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: var(--space-3);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2);
+  border-radius: var(--radius-lg);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+  cursor: default;
+}
+
+.skill-item:hover {
+  background-color: var(--color-surface-2);
+  transform: translateY(-2px);
+}
+
+.skill-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Fallback and custom SVG icon box for skills */
+.skill-item .skill-icon-fallback,
+.skill-item .skill-custom-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.skill-item .skill-custom-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.skill-item-name {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-align: center;
+  line-height: 1.3;
+}

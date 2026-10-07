@@ -1,0 +1,145 @@
+/* ==========================================================================
+   _experience.css — Experience Timeline
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent),
+    var(--color-accent-2)
+  );
+  border-radius: var(--radius-full);
+}
+
+@media (min-width: 640px) {
+  .timeline::before {
+    left: 28px;
+  }
+}
+
+/* ── Timeline item ─────────────────────────────────────────────────────────── */
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .timeline-item {
+    padding-left: 72px;
+  }
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-dot {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 4px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-accent);
+  z-index: 1;
+  transition: transform var(--transition-fast);
+}
+
+@media (min-width: 640px) {
+  .timeline-dot {
+    left: 18px;
+  }
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.25);
+}
+
+/* ── Timeline card ─────────────────────────────────────────────────────────── */
+.timeline-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.timeline-item:hover .timeline-card {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-role {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.timeline-period {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.timeline-company {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent-2);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.timeline-company-type {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.timeline-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+/* Pending description badge */
+.timeline-description .badge-pending {
+  display: inline-flex;
+  margin-top: var(--space-2);
+}
